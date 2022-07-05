@@ -1,12 +1,16 @@
 <template>
   <div>
     {{ text }}
+    {{ algo }}
   </div>
 </template>
 
 <script>
+import TheBase from "@/mixins/TheBase";
+
 export default {
   name: "App",
+  mixins: [TheBase],
   data: () => ({
     text: "Hola vue",
   }),
