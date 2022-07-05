@@ -1,9 +1,14 @@
-<template></template>
+<template>
+  <div>
+    <TheModal />
+  </div>
+</template>
 
 <script>
+import TheModal from "./components/TheModal.vue";
 export default {
   name: "App",
-  components: {},
+  components: { TheModal },
   data: () => ({}),
 };
 </script>
