@@ -1,28 +1,13 @@
 <template>
-  <div>
-    {{ text }}
-    {{ algo }}
-  </div>
+  <UserRepositories />
 </template>
 
 <script>
-import TheBase from "@/mixins/TheBase";
-
+import UserRepositories from "./components/UserRepositories";
 export default {
   name: "App",
-  mixins: [TheBase],
-  data: () => ({
-    text: "Hola vue",
-  }),
-
-  beforeCreate() {
-    console.log("beforeCreate", this.$data, this.$el);
-  },
-  created() {
-    console.log("Created", this.$data, this.$el);
-  },
-  mounted() {
-    console.log("mounted", this.$data, this.$el);
+  components: {
+    UserRepositories,
   },
 };
 </script>
