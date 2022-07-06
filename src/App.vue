@@ -1,13 +1,13 @@
 <template>
-  <UserRepositories />
+  <TheHome />
 </template>
 
 <script>
-import UserRepositories from "./components/UserRepositories";
+import TheHome from "./components/TheHome.vue";
 export default {
   name: "App",
   components: {
-    UserRepositories,
+    TheHome,
   },
 };
 </script>
