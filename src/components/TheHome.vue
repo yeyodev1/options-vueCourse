@@ -1,14 +1,18 @@
 <template>
-  <div></div>
+  <div>{{ obj }}</div>
 </template>
 
 <script>
-import { onMounted } from "vue";
+import { reactive } from "vue";
+
 export default {
   setup() {
-    onMounted(() => {
-      console.log("Mounted!");
-    });
+    const obj = reactive({ counter: 0 });
+    setInterval(() => obj.counter++, 500);
+
+    return {
+      obj,
+    };
   },
 };
 </script>
