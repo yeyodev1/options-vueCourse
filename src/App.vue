@@ -4,10 +4,15 @@
 
 <script>
 import TheHome from "./components/TheHome.vue";
+import { provide } from "vue";
+
 export default {
   name: "App",
   components: {
     TheHome,
+  },
+  setup() {
+    provide("username", "yeyodev");
   },
 };
 </script>
