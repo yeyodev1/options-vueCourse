@@ -11,11 +11,15 @@ export default {
     lastName: String,
   },
 
-  setup(props) {
+  setup(props, { expose }) {
     const { name, lastName } = toRefs(props);
 
     const fullName = computed(() => {
       return `${name.value} ${lastName.value}`;
+    });
+
+    expose({
+      fullName,
     });
 
     return {
